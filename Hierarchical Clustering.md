@@ -62,3 +62,12 @@ Left: The two clusters  $O_{3}$ and $O_{4}$  form a cluster, and the correspondi
 <img src="figures/hi3.JPG" width="600" height="300"> 
 
 Left: New dendrograms are created that combine $O_{3}$, $O_{4}$ and $O_{5}$  in one dendrogram. Right: At last, the final dendrogram is created that combines all the data points together.
+
+### References
+
+1. https://www.javatpoint.com/k-means-clustering-algorithm-in-machine-learning
+2. https://www.geeksforgeeks.org/dbscan-clustering-in-ml-density-based-clustering/
+3. https://www.analyticsvidhya.com/blog/2020/09/how-dbscan-clustering-works/
+4. Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani, (2013). 
+An introduction to statistical learning : with applications in R. New York :Springer.
+
