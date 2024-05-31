@@ -41,7 +41,7 @@ DBSCAN classifies points into three categories:
 
 •	Noise points: Neither core nor border points.
 
-<img src="figures/db2.JPG" width="600" height="300"> 
+<img src="figDBSCAN/db2.JPG" width="600" height="300"> 
 [ref](https://www.geeksforgeeks.org/dbscan-clustering-in-ml-density-based-clustering/)
 
 ##### Reachability and Connectivity
