@@ -38,7 +38,9 @@ often assuming Gaussian distributions. A notable example is the Expectation-Maxi
 Instead, it creates a tree-like structure (dendrogram) that illustrates the hierarchy of clusters. Clusters can be formed at any 
 level by cutting the dendrogram at the appropriate point. The Agglomerative Hierarchical algorithm is a typical example.
 
-6.	*Fuzzy Clustering*: In this soft clustering method, data objects can belong to multiple clusters, with membership coefficients indicating the degree of belonging. 
+<img src="figures/hirar1.JPG" width="600" height="300"> 
+
+7.	*Fuzzy Clustering*: In this soft clustering method, data objects can belong to multiple clusters, with membership coefficients indicating the degree of belonging. 
 The Fuzzy C-Means algorithm, also known as `Fuzzy K-Means`, is an example.
 These diverse clustering techniques enable the analysis and segmentation of data sets in various ways, each with its unique strengths and applications.
 
