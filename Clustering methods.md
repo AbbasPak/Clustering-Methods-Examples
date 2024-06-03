@@ -43,7 +43,7 @@ The Fuzzy C-Means algorithm, also known as `Fuzzy K-Means`, is an example.
 These diverse clustering techniques enable the analysis and segmentation of data sets in various ways, each with its unique strengths and applications.
 
 
-
+ <img src="figures/cluster-Covid.JPG" width="600" height="300">
 
 
 
