@@ -1,7 +1,8 @@
 ## Gaussian Mixture Models
 
-A Gaussian Mixture Model (GMM) is a probabilistic model that assumes all the data points are generated from a mixture of several Gaussian distributions with unknown parameters. It is widely used in clustering, where the goal is to partition a dataset into subgroups, such that data points in the same group are more similar to each other than to those in other groups. Here’s a comprehensive description of GMM in clustering:
-Key Concepts
+A Gaussian Mixture Model (GMM) is a probabilistic model that assumes all the data points are generated from a mixture of several Gaussian distributions with unknown parameters. It is widely used in clustering, where the goal is to partition a dataset into subgroups, such that data points in the same group are more similar to each other than to those in other groups. 
+
+
 
     
 
