@@ -3,6 +3,11 @@
 A Gaussian Mixture Model (GMM) is a probabilistic model that assumes all the data points are generated from a mixture of several Gaussian distributions with unknown parameters. It is widely used in clustering, where the goal is to partition a dataset into subgroups, such that data points in the same group are more similar to each other than to those in other groups. 
 
 
+While k-means clustering is a popular and straightforward algorithm for clustering, it has several drawbacks:
+1. Assumption of Spherical Clusters: K-means: Assumes that clusters are spherical (or roughly spherical) and of similar size. This means it doesn't perform well on clusters with different shapes and sizes.
+2. Hard Assignments: K-means: Assigns each data point to exactly one cluster (hard clustering), which can be too restrictive and lead to misclassification, especially when data points are near the boundary of clusters.
+3. Cluster Overlap: K-means: Struggles with overlapping clusters because it assigns each point to the closest centroid, which might not be meaningful if clusters overlap.
+4. Handling of Outliers: K-means: Can be significantly affected by outliers, as they can distort the mean position of clusters.
 
     
 
