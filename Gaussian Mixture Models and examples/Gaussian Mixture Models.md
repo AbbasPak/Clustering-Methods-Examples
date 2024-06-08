@@ -15,7 +15,7 @@ While k-means clustering is a popular and straightforward algorithm for clusteri
 4. Handling of Outliers: K-means: Can be significantly affected by outliers, as they can distort the mean position of clusters.
 
     
-
+Gaussian Mixture Models, on the other hand, offer greater flexibility and robustness through probabilistic clustering and the ability to model clusters with different shapes and sizes. GMM can model clusters of different shapes and sizes because each cluster is represented by a Gaussian distribution with its own mean and covariance matrix. Moreover, GMM provides soft assignments, where each data point has a probability of belonging to each cluster. It can naturally handle overlapping clusters by assigning probabilities to cluster memberships, reflecting the uncertainty and overlap between clusters.
 
 
     
