@@ -17,6 +17,8 @@ While k-means clustering is a popular and straightforward algorithm for clusteri
     
 Gaussian Mixture Models, on the other hand, offer greater flexibility and robustness through probabilistic clustering and the ability to model clusters with different shapes and sizes. GMM can model clusters of different shapes and sizes because each cluster is represented by a Gaussian distribution with its own mean and covariance matrix. Moreover, GMM provides soft assignments, where each data point has a probability of belonging to each cluster. It can naturally handle overlapping clusters by assigning probabilities to cluster memberships, reflecting the uncertainty and overlap between clusters.
 
+#### How GMM Works?
+A Gaussian mixture model is simply a model that fits multiple Gaussian distributions to a set of data. Each Gaussian in the mixture model represents a potential cluster. Once our Gaussian mixture fits the data as closely as possible, we can calculate the probability of each case belonging to each cluster and assign the cases to the most likely cluster. The question that arises here is that we know neither the distribution from which each training sample was drawn nor the parameters of the mixture model, however, how can we find a mixture of Gaussians that fits the underlying data well? To do this, we start with initial guesses for the parameters and use them to calculate cluster probabilities for each sample. Then, we use these probabilities to re-estimate the parameters and repeat this cycle until convergence. This is done by employing   expectation- maximization algorithm.
 
     
 
