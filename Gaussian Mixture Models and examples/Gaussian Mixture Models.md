@@ -21,7 +21,7 @@ Gaussian Mixture Models, on the other hand, offer greater flexibility and robust
 A Gaussian mixture model is simply a model that fits multiple Gaussian distributions to a set of data. Each Gaussian in the mixture model represents a potential cluster. Once our Gaussian mixture fits the data as closely as possible, we can calculate the probability of each case belonging to each cluster and assign the cases to the most likely cluster. The question that arises here is that we know neither the distribution from which each training sample was drawn nor the parameters of the mixture model, however, how can we find a mixture of Gaussians that fits the underlying data well? To do this, we start with initial guesses for the parameters and use them to calculate cluster probabilities for each sample. Then, we use these probabilities to re-estimate the parameters and repeat this cycle until convergence. This is done by employing   expectation- maximization algorithm.
 
     
-*Steps of GMM*:
+*Schematic of the steps of GMM*:
 
 <img src="fig/p1.JPG" width="400" height="200"> 
 
