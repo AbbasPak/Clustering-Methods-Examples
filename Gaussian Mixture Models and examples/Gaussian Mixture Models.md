@@ -23,15 +23,19 @@ A Gaussian mixture model is simply a model that fits multiple Gaussian distribut
     
 *Steps of GMM*:
 
+<img src="fig/p1.JPG" width="600" height="300"> 
 
 1. Gaussian initialization
 
+<img src="fig/p2.JPG" width="600" height="300"> 
 
 2. Calculating the probability of clusters for each sample
 
+<img src="fig/p3.JPG" width="600" height="300"> 
 
 3. Updating the means and variances
 
+<img src="fig/p4.JPG" width="600" height="300"> 
 
 4. Iterating the EM algorithm until convergence
 
