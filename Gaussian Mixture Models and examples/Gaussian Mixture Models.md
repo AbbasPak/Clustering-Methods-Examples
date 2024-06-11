@@ -37,7 +37,7 @@ A Gaussian mixture model is simply a model that fits multiple Gaussian distribut
 
 <img src="fig/p4.JPG" width="400" height="200"> 
 
-4. Iterating the EM algorithm until convergence
+4. Iterating steps 2 and 3 until convergence
 
 
 
