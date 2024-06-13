@@ -40,8 +40,15 @@ A Gaussian mixture model is simply a model that fits multiple Gaussian distribut
 4. Iterating steps 2 and 3 until convergence
 
 
+#### The math of GMM
 
+Suppose that the data point $x$ is generated from a mixture of Gaussian distributions as:
+$$p(x)=\sum_{k=1}^K\alpha_{k}p(x |\mu, \Sigma)$$
+such that $$\sum_{k=1}^K\alpha_{k}=1.$$
 
+Moreover, we define latent variables $z_{1}$ ,..., $z_{k}$ that can take only two possible values. They are one when $x $ came from Gaussian $k$, and zero otherwise. Thus, we can state:
+$$\alpha_{k}=p(z_{k}=1)$$ 
+which means that the overall probability of observing a point that comes from Gaussian $k$ is actually equivalent to the mixing coefficient for that Gaussian. This makes sense, because the bigger the Gaussian is, the higher we would expect this probability to be.
 
 #### Advantages
 
