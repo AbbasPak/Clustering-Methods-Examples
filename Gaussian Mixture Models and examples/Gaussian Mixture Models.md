@@ -50,6 +50,59 @@ Moreover, we define latent variables $z_{1}$ ,..., $z_{k}$ that can take only tw
 $$\alpha_{k}=p(z_{k}=1)$$ 
 which means that the overall probability of observing a point that comes from Gaussian $k$ is actually equivalent to the mixing coefficient for that Gaussian. This makes sense, because the bigger the Gaussian is, the higher we would expect this probability to be.
 
+
+*Key Concepts*
+
+    Gaussian Distribution: Also known as the normal distribution, it is characterized by two parameters: the mean (μμ) and the covariance (ΣΣ). In the univariate case, the probability density function (pdf) of a Gaussian distribution is:
+    N(x∣μ,σ2)=12πσ2e−(x−μ)22σ2
+    N(x∣μ,σ2)=2πσ2
+
+    ​1​e−2σ2(x−μ)2​
+
+    In the multivariate case, the pdf is:
+    N(x∣μ,Σ)=1(2π)k/2∣Σ∣1/2e−12(x−μ)TΣ−1(x−μ)
+    N(x∣μ,Σ)=(2π)k/2∣Σ∣1/21​e−21​(x−μ)TΣ−1(x−μ)
+
+    where xx is a kk-dimensional vector.
+
+    Mixture Model: In a mixture model, each data point is assumed to belong to one of several subpopulations or clusters. The overall distribution of the data is a weighted sum of the Gaussian components.
+
+    Latent Variables: These are hidden variables that represent the cluster memberships of data points. In GMMs, the latent variable zizi​ indicates the cluster to which the ii-th data point belongs.
+
+Model Components
+
+    Parameters:
+        Means (μkμk​): Each Gaussian component has its mean vector.
+        Covariances (ΣkΣk​): Each Gaussian component has its covariance matrix.
+        Mixing Coefficients (πkπk​): These are the weights of each Gaussian component and must sum to 1. They represent the probability that a randomly selected data point comes from the kk-th component.
+
+    Probability Density Function: The overall pdf of the mixture model for a data point xx is given by:
+    p(x)=∑k=1KπkN(x∣μk,Σk)
+    p(x)=k=1∑K​πk​N(x∣μk​,Σk​)
+
+    where KK is the number of Gaussian components.
+
+Estimation
+
+The parameters of a GMM are typically estimated using the Expectation-Maximization (EM) algorithm, which iteratively refines the parameters to maximize the likelihood of the observed data.
+
+    Initialization: Start with initial guesses for the parameters μkμk​, ΣkΣk​, and πkπk​.
+
+    Expectation Step (E-Step): Calculate the posterior probabilities (responsibilities) that each data point belongs to each Gaussian component:
+    γik=πkN(xi∣μk,Σk)∑j=1KπjN(xi∣μj,Σj)
+    γik​=∑j=1K​πj​N(xi​∣μj​,Σj​)πk​N(xi​∣μk​,Σk​)​
+
+    where γikγik​ is the responsibility of component kk for data point ii.
+
+    Maximization Step (M-Step): Update the parameters using the responsibilities:
+    πk=1N∑i=1Nγik
+    πk​=N1​i=1∑N​γik​
+    μk=∑i=1Nγikxi∑i=1Nγik
+    μk​=∑i=1N​γik​∑i=1N​γik​xi​​
+    Σk=∑i=1Nγik(xi−μk)(xi−μk)T∑i=1Nγik
+    Σk​=∑i=1N​γik​∑i=1N​γik​(xi​−μk​)(xi​−μk​)T​
+
+    Repeat the E-Step and M-Step until convergence.
 #### Advantages
 
 •	Flexibility: GMM can model clusters of different shapes and sizes because each cluster is represented by its own Gaussian distribution with its own mean and covariance.
