@@ -40,15 +40,15 @@ A Gaussian mixture model is simply a model that fits multiple Gaussian distribut
 4. Iterating steps 2 and 3 until convergence
 
 
-#### The math of GMM
-
 **Key Concepts**
 
 1. *Gaussian Distribution*: Also known as the normal distribution, it is characterized by two parameters: the mean $\mu$ and the covariance $\Sigma$. In the univariate case, the probability density function (pdf) of a Gaussian distribution is:
-    <img src="fig/e1.JPG" width="400" height="200"> 
+
+<img src="fig/e1.JPG" width="300" height="100">
 
 In the multivariate case, the pdf is:
-    <img src="fig/e2.JPG" width="400" height="200">
+
+<img src="fig/e2.JPG" width="300" height="100">
 
 where $x$ is a $k$-dimensional vector.
 
@@ -64,31 +64,27 @@ where $x$ is a $k$-dimensional vector.
   + Mixing Coefficients ($\pi_{k}$): These are the weights of each Gaussian component and must sum to 1. They represent the probability that a randomly selected data point comes from the $k$-th component.
 
 2. *Probability Density Function*: The overall pdf of the mixture model for a data point $x$ is given by:
-    <img src="fig/e2.JPG" width="400" height="200">
+<img src="fig/e3.JPG" width="300" height="100">
 
 where $K$ is the number of Gaussian components.
 
-Estimation
+**Estimation**
 
 The parameters of a GMM are typically estimated using the Expectation-Maximization (EM) algorithm, which iteratively refines the parameters to maximize the likelihood of the observed data.
 
-    Initialization: Start with initial guesses for the parameters μkμk​, ΣkΣk​, and πkπk​.
+1. *Initialization*: Start with initial guesses for the parameters $\mu_{k}$​, $\Sigma_{k}$, and $\pi_{k}$​.
 
-    Expectation Step (E-Step): Calculate the posterior probabilities (responsibilities) that each data point belongs to each Gaussian component:
-    γik=πkN(xi∣μk,Σk)∑j=1KπjN(xi∣μj,Σj)
-    γik​=∑j=1K​πj​N(xi​∣μj​,Σj​)πk​N(xi​∣μk​,Σk​)​
+2. *Expectation Step (E-Step)*: Calculate the posterior probabilities (responsibilities) that each data point belongs to each Gaussian component:
+<img src="fig/e4.JPG" width="300" height="100">
 
-    where γikγik​ is the responsibility of component kk for data point ii.
+where $\gamma_{ik}$ is the responsibility of component $k$ for data point $i$.
 
-    Maximization Step (M-Step): Update the parameters using the responsibilities:
-    πk=1N∑i=1Nγik
-    πk​=N1​i=1∑N​γik​
-    μk=∑i=1Nγikxi∑i=1Nγik
-    μk​=∑i=1N​γik​∑i=1N​γik​xi​​
-    Σk=∑i=1Nγik(xi−μk)(xi−μk)T∑i=1Nγik
-    Σk​=∑i=1N​γik​∑i=1N​γik​(xi​−μk​)(xi​−μk​)T​
+3. *Maximization Step (M-Step)*: Update the parameters using the responsibilities:
 
-    Repeat the E-Step and M-Step until convergence.
+<img src="fig/e5.JPG" width="500" height="300">
+
+Repeat the E-Step and M-Step until convergence.
+
 #### Advantages
 
 •	Flexibility: GMM can model clusters of different shapes and sizes because each cluster is represented by its own Gaussian distribution with its own mean and covariance.
