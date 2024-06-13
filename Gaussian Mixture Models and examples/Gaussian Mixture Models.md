@@ -51,36 +51,31 @@ $$\alpha_{k}=p(z_{k}=1)$$
 which means that the overall probability of observing a point that comes from Gaussian $k$ is actually equivalent to the mixing coefficient for that Gaussian. This makes sense, because the bigger the Gaussian is, the higher we would expect this probability to be.
 
 
-*Key Concepts*
+**Key Concepts**
 
-    Gaussian Distribution: Also known as the normal distribution, it is characterized by two parameters: the mean (μμ) and the covariance (ΣΣ). In the univariate case, the probability density function (pdf) of a Gaussian distribution is:
-    N(x∣μ,σ2)=12πσ2e−(x−μ)22σ2
-    N(x∣μ,σ2)=2πσ2
+1. *Gaussian Distribution*: Also known as the normal distribution, it is characterized by two parameters: the mean $\mu$ and the covariance $\Sigma$. In the univariate case, the probability density function (pdf) of a Gaussian distribution is:
+    <img src="fig/e1.JPG" width="400" height="200"> 
 
-    ​1​e−2σ2(x−μ)2​
+In the multivariate case, the pdf is:
+    <img src="fig/e2.JPG" width="400" height="200">
 
-    In the multivariate case, the pdf is:
-    N(x∣μ,Σ)=1(2π)k/2∣Σ∣1/2e−12(x−μ)TΣ−1(x−μ)
-    N(x∣μ,Σ)=(2π)k/2∣Σ∣1/21​e−21​(x−μ)TΣ−1(x−μ)
+where $x$ is a $k$-dimensional vector.
 
-    where xx is a kk-dimensional vector.
+2. *Mixture Model*: In a mixture model, each data point is assumed to belong to one of several subpopulations or clusters. The overall distribution of the data is a weighted sum of the Gaussian components.
 
-    Mixture Model: In a mixture model, each data point is assumed to belong to one of several subpopulations or clusters. The overall distribution of the data is a weighted sum of the Gaussian components.
+3. *Latent Variables*: These are hidden variables that represent the cluster memberships of data points. In GMMs, the latent variable $z_{i}$​ indicates the cluster to which the $i$-th data point belongs.
 
-    Latent Variables: These are hidden variables that represent the cluster memberships of data points. In GMMs, the latent variable zizi​ indicates the cluster to which the ii-th data point belongs.
+**Model Components**
 
-Model Components
+1. *Parameters*:
+  + Means ($\mu_{k}$​): Each Gaussian component has its mean vector.
+  + Covariances ($\Sigma_{k}$): Each Gaussian component has its covariance matrix.
+  + Mixing Coefficients ($\pi_{k}$): These are the weights of each Gaussian component and must sum to 1. They represent the probability that a randomly selected data point comes from the $k$-th component.
 
-    Parameters:
-        Means (μkμk​): Each Gaussian component has its mean vector.
-        Covariances (ΣkΣk​): Each Gaussian component has its covariance matrix.
-        Mixing Coefficients (πkπk​): These are the weights of each Gaussian component and must sum to 1. They represent the probability that a randomly selected data point comes from the kk-th component.
+2. *Probability Density Function*: The overall pdf of the mixture model for a data point $x$ is given by:
+    <img src="fig/e2.JPG" width="400" height="200">
 
-    Probability Density Function: The overall pdf of the mixture model for a data point xx is given by:
-    p(x)=∑k=1KπkN(x∣μk,Σk)
-    p(x)=k=1∑K​πk​N(x∣μk​,Σk​)
-
-    where KK is the number of Gaussian components.
+where $K$ is the number of Gaussian components.
 
 Estimation
 
