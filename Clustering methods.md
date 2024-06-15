@@ -24,23 +24,23 @@ Each cluster center is determined so that the distance between data points withi
 <img src="figures/clusterpar.JPG" width="600" height="300"> 
 [ref](https://www.javatpoint.com/clustering-in-machine-learning)
 
-3.	*Density-Based Clustering*: This approach connects dense regions of data into clusters, forming arbitrarily shaped distributions as long as dense regions are connected. 
+2.	*Density-Based Clustering*: This approach connects dense regions of data into clusters, forming arbitrarily shaped distributions as long as dense regions are connected. 
 By identifying high-density clusters separated by sparser areas, these methods can struggle with varying densities and high-dimensional data. 
 An example is the `DBSCAN` algorithm.
 
 <img src="figures/clusterden.JPG" width="600" height="300"> 
 [ref](https://www.javatpoint.com/clustering-in-machine-learning)
 
-4.	*Distribution Model-Based Clustering*: This method clusters data based on the probability of belonging to a particular distribution, 
+3.	*Distribution Model-Based Clustering*: This method clusters data based on the probability of belonging to a particular distribution, 
 often assuming Gaussian distributions. A notable example is the Expectation-Maximization algorithm using `Gaussian Mixture Models` (GMM).
 
-5.	*Hierarchical Clustering*: Unlike partitioning methods, `hierarchical clustering` does not require a predefined number of clusters. 
+4.	*Hierarchical Clustering*: Unlike partitioning methods, `hierarchical clustering` does not require a predefined number of clusters. 
 Instead, it creates a tree-like structure (dendrogram) that illustrates the hierarchy of clusters. Clusters can be formed at any 
 level by cutting the dendrogram at the appropriate point. The Agglomerative Hierarchical algorithm is a typical example.
 
 <img src="figures/hirar1.JPG" width="600" height="300"> 
 
-7.	*Fuzzy Clustering*: In this soft clustering method, data objects can belong to multiple clusters, with membership coefficients indicating the degree of belonging. 
+5.	*Fuzzy Clustering*: In this soft clustering method, data objects can belong to multiple clusters, with membership coefficients indicating the degree of belonging. 
 The Fuzzy C-Means algorithm, also known as `Fuzzy K-Means`, is an example.
 These diverse clustering techniques enable the analysis and segmentation of data sets in various ways, each with its unique strengths and applications.
 
