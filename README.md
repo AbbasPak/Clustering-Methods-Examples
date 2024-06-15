@@ -9,6 +9,6 @@
 + Anomaly Detection: Identifying unusual data points in a dataset.
 + Biological Data Analysis: Grouping genes or proteins with similar expression patterns.
 
-This repository aims to provide an overview of various clustering methods, along with practical examples and implementations. 
+This repository aims to provide an [overview of various clustering methods](https://github.com/AbbasPak/Clustering-Methods-Examples/blob/main/Clustering%20methods.md), along with practical examples and implementations. 
 
 
