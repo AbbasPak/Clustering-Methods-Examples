@@ -17,7 +17,8 @@ Due to its widespread applicability, numerous clustering methods exist across di
 Hard Clustering (where each data point belongs to only one group) and Soft Clustering (where data points can belong to multiple groups). 
 However, several other approaches also exist. Key clustering methods in machine learning include:
 
-1.	*Partitioning Clustering*: This method divides data into non-hierarchical groups, also known as centroid-based clustering. A common example is the `K-Means` algorithm, 
+1.	*Partitioning Clustering*: This method divides data into non-hierarchical groups, also known as centroid-based clustering.
+A common example is the [K-Means algorithm](https://github.com/AbbasPak/Clustering-Methods-Examples/tree/main/K-means%20algorithm%20and%20examples), 
 which partitions the data set into a predefined number of groups (k). 
 Each cluster center is determined so that the distance between data points within a cluster is minimized compared to points in other clusters.
 
@@ -26,17 +27,17 @@ Each cluster center is determined so that the distance between data points withi
 
 2.	*Density-Based Clustering*: This approach connects dense regions of data into clusters, forming arbitrarily shaped distributions as long as dense regions are connected. 
 By identifying high-density clusters separated by sparser areas, these methods can struggle with varying densities and high-dimensional data. 
-An example is the `DBSCAN` algorithm.
+An example is the [DBSCAN algorithm](https://github.com/AbbasPak/Clustering-Methods-Examples/tree/main/DBSCAN%20algorithm%20and%20examples).
 
 <img src="figures/clusterden.JPG" width="600" height="300"> 
 [ref](https://www.javatpoint.com/clustering-in-machine-learning)
 
 3.	*Distribution Model-Based Clustering*: This method clusters data based on the probability of belonging to a particular distribution, 
-often assuming Gaussian distributions. A notable example is the Expectation-Maximization algorithm using `Gaussian Mixture Models` (GMM).
+often assuming Gaussian distributions. A notable example is the Expectation-Maximization algorithm using [Gaussian Mixture Models (GMM)](https://github.com/AbbasPak/Clustering-Methods-Examples/tree/main/Gaussian%20Mixture%20Models%20and%20examples).
 
 4.	*Hierarchical Clustering*: Unlike partitioning methods, `hierarchical clustering` does not require a predefined number of clusters. 
 Instead, it creates a tree-like structure (dendrogram) that illustrates the hierarchy of clusters. Clusters can be formed at any 
-level by cutting the dendrogram at the appropriate point. The Agglomerative Hierarchical algorithm is a typical example.
+level by cutting the dendrogram at the appropriate point. The [Agglomerative Hierarchical algorithm](https://github.com/AbbasPak/Clustering-Methods-Examples/tree/main/Hierarchical%20algorithm%20and%20examples)  is a typical example.
 
 <img src="figures/hirar1.JPG" width="600" height="300"> 
 
