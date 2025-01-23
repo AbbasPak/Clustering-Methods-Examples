@@ -4,9 +4,7 @@
 `Clustering` encompasses a wide range of techniques for identifying subgroups, or clusters, within a data set. 
 The goal of clustering is to partition observations into distinct groups where the members of each group are highly similar to one another, yet significantly different from members of other groups. To achieve this, it’s essential to define what makes observations similar or different, which typically involves identifying patterns in an unlabeled data set, such as shape, size, color, or behavior. As an unsupervised learning method, clustering operates without predefined labels or guidance, analyzing the data independently.
 
-<img src="figures/clusterfin.JPG" width="600" height="300"> 
-
-
+<img src="figures/Capture1.JPG" width="600" height="300"> 
 
 
 One practical application of clustering is in marketing, where we might analyze various metrics (e.g., median household income, occupation, proximity to urban areas) 
